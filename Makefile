@@ -47,3 +47,8 @@ info:
 
 add_component:
 	npm exec -y shadcn@latest add $(COMPONENT)
+
+# lint, pull upstream trunk, rebasing under your local stack. if draft commits
+# exist, push them onto trunk
+sync: ./repo_sync.sh
+	$(SHELL) ./repo_sync.sh
