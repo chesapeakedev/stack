@@ -11,8 +11,7 @@ import { badgeVariants, type BadgeVariantsProps } from "./badgeVariants.ts";
  * Extends HTML div props and adds variant options
  */
 export interface BadgeProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    BadgeVariantsProps {}
+  extends React.HTMLAttributes<HTMLDivElement>, BadgeVariantsProps {}
 
 /**
  * A small label component for displaying status, categories, or counts.

@@ -58,8 +58,10 @@ interface AutocompleteService {
   ): void;
 }
 
-export interface LocationInputProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "onChange"> {
+export interface LocationInputProps extends Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  "onChange"
+> {
   onLocationSelect?: (location: LocationSuggestion) => void;
   onInputChange?: (value: string) => void;
   onSearchClose?: () => void;

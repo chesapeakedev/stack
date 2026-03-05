@@ -12,7 +12,8 @@ import { buttonVariants, type ButtonVariantsProps } from "./buttonVariants.ts";
  * Extends HTML button props and adds variant/size options from buttonVariants
  */
 interface ButtonProps
-  extends Omit<React.ComponentPropsWithoutRef<"button">, "ref">,
+  extends
+    Omit<React.ComponentPropsWithoutRef<"button">, "ref">,
     ButtonVariantsProps {
   /**
    * When true, the button will pass all props to its child element.

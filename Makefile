@@ -13,6 +13,10 @@ lint:
 	npm run lint
 	npm run typecheck
 
+fmt:
+	@echo "Formatting files..."
+	npm run fmt
+
 # Clean any generated files
 clean:
 	@echo "Cleaning shared components..."
