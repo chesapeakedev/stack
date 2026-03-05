@@ -1,0 +1,22 @@
+# Build output
+dist/
+node_modules/
+
+# Environment files
+.env
+.env.example
+.env.local
+.env.*.local
+
+# Generated files
+*.min.js
+*.min.css
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Markdown files
+*.md
+**/*.md

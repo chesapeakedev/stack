@@ -1,0 +1,54 @@
+/* Chesapeake Component Styles */
+/* Add any component-specific styles here that can't be handled by Tailwind */
+
+/* Example: Custom animations or complex styles */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-from-top {
+  animation: slideInFromTop 0.3s ease-out;
+}
+
+/* Particle float animation for ActivityAnimation component */
+@keyframes particle-float-opacity {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Fire flicker animation for FireAnimation component */
+@keyframes fire-flicker {
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scaleY(1) scaleX(1);
+  }
+  25% {
+    opacity: 0.7;
+    transform: scaleY(1.1) scaleX(0.95);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scaleY(0.95) scaleX(1.05);
+  }
+  75% {
+    opacity: 0.9;
+    transform: scaleY(1.05) scaleX(0.98);
+  }
+}
+
+.animate-fire-flicker {
+  animation: fire-flicker 1.5s ease-in-out infinite;
+}

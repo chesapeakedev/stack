@@ -1,0 +1,33 @@
+# Development files
+.vscode/
+.cursor/
+*.md
+!README.md
+
+# Build artifacts
+dist/
+build/
+*.log
+
+# Dependencies
+node_modules/
+
+# Test files
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Config files (keep only what's needed for package)
+.eslintrc*
+.prettierrc*
+tsconfig*.json
+!tsconfig.json
+
+# Documentation
+DESIGN_DEPS.md
+
+# Temporary files
+*.tmp
+*.bak
+.DS_Store

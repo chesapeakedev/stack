@@ -1,0 +1,167 @@
+{
+  "name": "@chesapeake/stack",
+  "version": "0.1.0",
+  "description": "A simple, reusable React component library and design system built on shadcn/ui with Tailwind CSS",
+  "type": "module",
+  "packageManager": "npm@10.2.0",
+  "license": "Apache-2.0",
+  "author": "Chesapeake Computing <chris@chesapeake.dev>",
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "design-system",
+    "tailwindcss",
+    "shadcn",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chesapeake-computing/stack.git"
+  },
+  "homepage": "https://github.com/chesapeake-computing/stack#readme",
+  "bugs": {
+    "url": "https://github.com/chesapeake-computing/stack/issues"
+  },
+  "files": [
+    "components",
+    "lib",
+    "styles",
+    "types",
+    "index.ts",
+    "tailwind.preset.ts",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc -b --noEmit",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
+    "prepublishOnly": "npm run lint && npm run typecheck"
+  },
+  "exports": {
+    ".": "./index.ts",
+    "./components/ui": "./components/ui/index.ts",
+    "./components/ui/button": "./components/ui/button.tsx",
+    "./components/ui/avatar": "./components/ui/avatar.tsx",
+    "./components/ui/badge": "./components/ui/badge.tsx",
+    "./components/ui/badgeVariants": "./components/ui/badgeVariants.ts",
+    "./components/ui/button-group": "./components/ui/button-group.tsx",
+    "./components/ui/buttonGroupVariants": "./components/ui/buttonGroupVariants.ts",
+    "./components/ui/buttonVariants": "./components/ui/buttonVariants.ts",
+    "./components/ui/calendar": "./components/ui/calendar.tsx",
+    "./components/ui/card": "./components/ui/card.tsx",
+    "./components/ui/dialog": "./components/ui/dialog.tsx",
+    "./components/ui/drawer": "./components/ui/drawer.tsx",
+    "./components/ui/dropdown-menu": "./components/ui/dropdown-menu.tsx",
+    "./components/ui/input": "./components/ui/input.tsx",
+    "./components/ui/label": "./components/ui/label.tsx",
+    "./components/ui/location-input": "./components/ui/location-input.tsx",
+    "./components/ui/popover": "./components/ui/popover.tsx",
+    "./components/ui/select": "./components/ui/select.tsx",
+    "./components/ui/separator": "./components/ui/separator.tsx",
+    "./components/ui/sonner": "./components/ui/sonner.tsx",
+    "./components/ui/sonner-api": "./components/ui/sonner-api.ts",
+    "./components/ui/textarea": "./components/ui/textarea.tsx",
+    "./components/ui/tooltip": "./components/ui/tooltip.tsx",
+    "./components/ux": "./components/ux/index.ts",
+    "./components/ux/ActivityAnimation": "./components/ux/ActivityAnimation.tsx",
+    "./components/ux/FireAnimation": "./components/ux/FireAnimation.tsx",
+    "./components/ux/GifSearch": "./components/ux/GifSearch.tsx",
+    "./components/ux/ImageUpload": "./components/ux/ImageUpload.tsx",
+    "./components/ux/PageLayout": "./components/ux/PageLayout.tsx",
+    "./components/ux/TutorialCarousel": "./components/ux/TutorialCarousel.tsx",
+    "./components/ux/theme-provider": "./components/ux/theme-provider.tsx",
+    "./components/ux/useTheme": "./components/ux/useTheme.ts",
+    "./components/ux/FeedbackDrawer": "./components/ux/FeedbackDrawer.tsx",
+    "./components/ux/auth": "./components/ux/auth/index.ts",
+    "./components/ux/auth/google": "./components/ux/auth/google/index.ts",
+    "./components/ux/auth/google/client": "./components/ux/auth/google/client.ts",
+    "./components/ux/auth/google/default-client": "./components/ux/auth/google/default-client.ts",
+    "./components/ux/auth/google/AuthProvider": "./components/ux/auth/google/AuthProvider.tsx",
+    "./components/ux/auth/google/AuthCallback": "./components/ux/auth/google/AuthCallback.tsx",
+    "./components/ux/auth/google/types": "./components/ux/auth/google/types.ts",
+    "./components/ux/auth/github": "./components/ux/auth/github/index.ts",
+    "./components/ux/auth/github/client": "./components/ux/auth/github/client.ts",
+    "./components/ux/auth/github/default-client": "./components/ux/auth/github/default-client.ts",
+    "./components/ux/auth/github/AuthProvider": "./components/ux/auth/github/AuthProvider.tsx",
+    "./components/ux/auth/github/AuthCallback": "./components/ux/auth/github/AuthCallback.tsx",
+    "./components/ux/auth/github/types": "./components/ux/auth/github/types.ts",
+    "./lib/utils": "./lib/utils.ts",
+    "./types/user": "./types/user.ts",
+    "./styles": "./styles/index.css",
+    "./tailwind.preset": "./tailwind.preset.ts",
+    "./eslint.config": "./eslint.config.js",
+    "./prettier.config": "./prettier.config.js"
+  },
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.10",
+    "@radix-ui/react-checkbox": "^1.1.1",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-popover": "^1.1.15",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-separator": "^1.1.8",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-tooltip": "^1.2.8",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.400.0",
+    "sonner": "^1.7.4",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@tailwindcss/vite": "^4.1.3",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^5.1.2",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.3",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^7.3.1"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-day-picker": "^9.11.1",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.0",
+    "tw-animate-css": "^1.2.0",
+    "vaul": "^1.1.2"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": false
+    },
+    "tw-animate-css": {
+      "optional": false
+    },
+    "react-day-picker": {
+      "optional": false
+    },
+    "vaul": {
+      "optional": false
+    },
+    "react": {
+      "optional": false
+    },
+    "react-dom": {
+      "optional": false
+    }
+  }
+}

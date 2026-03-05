@@ -1,0 +1,55 @@
+# @chespeake/ui
+
+> A typescript pacckage containing multiple applications and a shared component library for building modern web interfaces. The shared package provides a comprehensive design system with React components, Tailwind CSS presets, and design tokens for consistent UI development across all Chesapeake projects.
+
+This repository contains a shared component library (`apps/shared/`) that provides a complete design system for building user interfaces. The design system includes pre-built React components, CSS custom properties for theming, and Tailwind CSS configuration that can be easily integrated into any React application.
+
+The shared package follows modern React patterns with TypeScript, uses Radix UI primitives for accessibility, and implements a comprehensive theming system with dark mode support. All components are designed to work together cohesively while remaining flexible for customization.
+
+## Quick Setup Example
+
+To use the design system in a new React app:
+
+1. **Install dependencies**: `npm install react react-dom tailwindcss tw-animate-css`
+2. **Import styles** in `src/index.css`:
+   ```css
+   @import "tailwindcss";
+   @import "tw-animate-css";
+   @import "@shared/styles/index.css";
+   ```
+3. **Configure Tailwind** in `tailwind.config.ts`:
+   ```typescript
+   import sharedPreset from '@shared/tailwind.preset'
+   export default { presets: [sharedPreset] }
+   ```
+4. **Use components**:
+   ```tsx
+   import { Button } from '@shared/components/ui/button'
+   import { ThemeProvider } from '@shared/components/ux/theme-provider'
+   
+   function App() {
+     return (
+       <ThemeProvider>
+         <Button variant="default">Click me</Button>
+       </ThemeProvider>
+     )
+   }
+   ```
+
+## Getting Started
+
+- [Shared Components README](apps/shared/README.md): Complete installation and usage guide for the design system
+- [CSS Strategy](apps/shared/CSS_STRATEGY.md): Detailed explanation of the CSS architecture and theming approach
+
+## Component Library
+
+- [UI Components](apps/shared/components/ui/): Basic interface components (Button, Input, Calendar, etc.)
+- [UX Components](apps/shared/components/ux/): Complex user experience components (ThemeProvider, ImageUpload, etc.)
+- [Design Tokens](apps/shared/styles/tokens.css): CSS custom properties for colors, spacing, and theming
+- [Tailwind Preset](apps/shared/tailwind.preset.ts): Tailwind CSS configuration with design system tokens
+
+## Implementation Examples
+
+## Development
+
+- [Package Configuration](apps/shared/package.json): Dependencies and exports for the shared package
