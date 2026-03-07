@@ -17,7 +17,6 @@ system consists of:
 - `styles/index.css` that includes Tailwind CSS, design tokens, base styles, and
   component styles
 - `tailwind.preset.ts` for use in `tailwind.config.ts`
-- Peer dependencies declared for any component dependencies
 
 ## Installation
 
@@ -45,39 +44,7 @@ Import the shared styles in your app's main CSS file (e.g., `src/index.css`):
 @import "@chesapeake/stack/styles/index.css";
 ```
 
-### 3. Configure Bundler and TypeScript
-
-If you consume the package from source (e.g. in a monorepo), add a path alias so
-imports resolve correctly. When using the published npm package, use the package
-name in place of `@chesapeake/stack` in the examples below.
-
-**Vite** (`vite.config.ts`):
-
-```typescript
-import path from "path";
-
-export default defineConfig({
-  resolve: {
-    alias: {
-      "@shared": path.resolve(__dirname, "../stack"),
-    },
-  },
-});
-```
-
-**TypeScript** (`tsconfig.json`):
-
-```json
-{
-  "compilerOptions": {
-    "paths": {
-      "@shared/*": ["../stack/*"]
-    }
-  }
-}
-```
-
-### 4. Configure Tailwind
+### 3. Configure Tailwind
 
 Extend your `tailwind.config.ts` with the shared preset:
 
@@ -96,7 +63,7 @@ const config: Config = {
 export default config;
 ```
 
-### 5. Configure Tailwind Content
+### 4. Configure Tailwind Content
 
 Add the package to your Tailwind content configuration so classes are processed:
 
@@ -118,7 +85,7 @@ const config: Config = {
 export default config;
 ```
 
-### 6. Import and Use Components
+### 5. Import and Use Components
 
 Import and use components in your React components:
 
@@ -172,12 +139,6 @@ import type {
 } from "@chesapeake/stack/types/user";
 ```
 
-### Migrating from an older setup
-
-If you previously copied shared CSS or used a different import pattern: remove
-duplicate CSS, switch to the import pattern above, install any missing peer
-dependencies, and test all components.
-
 ## Usage
 
 ### Available Components
@@ -204,14 +165,6 @@ dependencies, and test all components.
 - **Tutorial Carousel** - Step-by-step tutorial component
 - **Page Layout** - `PageContent`, `PageHeader`, `PageLayout` for consistent
   page structure
-
-### Design System Features
-
-- **Design Tokens**: Consistent color palette, spacing, and typography
-- **Dark Mode**: Built-in dark theme support
-- **Responsive**: Mobile-first responsive design
-- **Accessibility**: ARIA-compliant components
-- **Animations**: Smooth transitions and micro-interactions
 
 ## Theming
 
@@ -390,15 +343,6 @@ This means you only need to override the variables you want to change!
 6. **Use Tailwind's color utilities** - they automatically use your custom
    variables
 
-### Migrating from an Older Theme
-
-If you're migrating from the old theme:
-
-1. Check which variables your project currently uses
-2. Import `@chesapeake/stack/styles/index.css`
-3. Override only the variables that need to change
-4. Test thoroughly in both light and dark modes
-
 ### Further Reading
 
 - [MDN: CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) -
@@ -408,33 +352,48 @@ If you're migrating from the old theme:
 - [Can I Use: CSS Custom Properties](https://caniuse.com/css-variables) -
   Browser support information
 
-## Project Structure
+## Examples
+
+The GitHub repository includes an
+[`examples/`](https://github.com/chesapeakedev/stack/tree/main/examples) folder
+with copy-pasteable React examples covering common patterns. Each example is a
+self-contained `.tsx` file you can drop into any app that has the stack
+installed and configured.
+
+| Example                                                                                                                      | What it covers                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| [`basic-form.tsx`](https://github.com/chesapeakedev/stack/blob/main/examples/basic-form.tsx)                                 | Input, Label, Textarea, Select, and Button composed into a working form         |
+| [`auth-setup.tsx`](https://github.com/chesapeakedev/stack/blob/main/examples/auth-setup.tsx)                                 | Multi-provider authentication with Google and GitHub using MultiAuthProvider    |
+| [`page-layout.tsx`](https://github.com/chesapeakedev/stack/blob/main/examples/page-layout.tsx)                               | App shell with StandardLayout, PageLayout, PageHeader, and PageContent          |
+| [`theme-customization.tsx`](https://github.com/chesapeakedev/stack/blob/main/examples/theme-customization.tsx)               | ThemeProvider, useTheme toggle, and a companion `.css` showing token overrides  |
+| [`feedback-and-notifications.tsx`](https://github.com/chesapeakedev/stack/blob/main/examples/feedback-and-notifications.tsx) | FeedbackDrawer, toast variants (success / error / promise), confirmation Dialog |
+| [`data-display.tsx`](https://github.com/chesapeakedev/stack/blob/main/examples/data-display.tsx)                             | Cards, badges, avatars, tooltips, dropdown menus, and EmptyState                |
+| [`user-management.tsx`](https://github.com/chesapeakedev/stack/blob/main/examples/user-management.tsx)                       | UserSelector multi-select search, FriendList with presence indicators           |
+
+## Package Contents
+
+When installed via npm you get:
 
 ```
-stack/
+@chesapeake/stack/
 ├── components/
-│   ├── ui/           # Basic UI components (shadcn/ui primitives)
-│   └── ux/           # Complex UX components (auth, layout, feedback)
+│   ├── ui/              # Primitive UI components (Button, Input, Card, …)
+│   └── ux/              # Higher-level UX components (auth, layout, feedback)
 ├── styles/
-│   ├── index.css     # Main stylesheet entry point
-│   ├── tokens.css    # Design tokens and CSS variables
-│   ├── base.css      # Base styles and utilities
-│   └── components.css # Component-specific styles
+│   ├── index.css        # Main stylesheet entry point
+│   ├── tokens.css       # Design tokens (CSS custom properties)
+│   ├── base.css         # Base styles and utilities
+│   └── components.css   # Component-specific styles
 ├── lib/
-│   └── utils.ts      # Utility functions
-├── types/            # Shared TypeScript types (e.g. user)
-├── tailwind.preset.ts # Tailwind configuration preset
-├── index.html        # Demo app entry (run npm run dev to preview)
-├── src/              # Demo app source (showcase components)
-├── public/           # Demo app static assets
-├── Makefile          # Lint, validate, add_component
-└── package.json      # Package configuration and exports
+│   └── utils.ts         # Utility functions (cn, etc.)
+├── types/               # Shared TypeScript types (BaseUser, Friend, …)
+├── tailwind.preset.ts   # Tailwind configuration preset
+├── eslint.config.js     # Shared ESLint config
+└── prettier.config.js   # Shared Prettier config
 ```
 
-The demo app (`index.html`, `src/`, `public/`) is for local development and
-showcase only; it is not published to npm.
+## Contributing
 
-# Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup, adding shadcn
-components, and opening PRs. 
+See the
+[CONTRIBUTING.md](https://github.com/chesapeakedev/stack/blob/main/CONTRIBUTING.md)
+on GitHub for development setup, adding shadcn components, and opening PRs.

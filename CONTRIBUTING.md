@@ -8,7 +8,7 @@ the library and demo locally.
 1. **Clone and install**
 
    ```bash
-   git clone https://github.com/chesapeake-computing/stack.git
+   git clone https://github.com/chesapeakedev/stack.git
    cd stack
    npm install
    ```

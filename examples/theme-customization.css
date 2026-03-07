@@ -1,0 +1,33 @@
+/*
+ * Example: overriding @chesapeake/stack design tokens.
+ *
+ * Import this AFTER the stack styles in your app's main CSS file:
+ *
+ *   @import "tailwindcss";
+ *   @import "tw-animate-css";
+ *   @import "@chesapeake/stack/styles/index.css";
+ *   @import "./theme-overrides.css";        <-- your overrides
+ */
+
+:root {
+  /* Brand colors (OKLCH for better interpolation) */
+  --primary: oklch(0.65 0.25 250);
+  --secondary: oklch(0.75 0.15 180);
+  --accent: oklch(0.85 0.1 300);
+
+  /* Subtle tinted background */
+  --background: oklch(0.98 0.005 260);
+
+  /* Custom fonts */
+  --font-sans: "Inter", "system-ui", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Softer corners */
+  --radius: 0.75rem;
+}
+
+.dark {
+  --primary: oklch(0.75 0.25 250);
+  --background: oklch(0.15 0.02 260);
+  --secondary: oklch(0.65 0.15 180);
+}

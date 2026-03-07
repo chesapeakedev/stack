@@ -4,6 +4,9 @@
 *.md
 !README.md
 
+# Examples (for reference only, not shipped in the package)
+examples/
+
 # Build artifacts
 dist/
 build/

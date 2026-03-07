@@ -1,6 +1,6 @@
 {
   "name": "@chesapeake/stack",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple, reusable React component library and design system built on shadcn/ui with Tailwind CSS",
   "type": "module",
   "packageManager": "npm@10.2.0",
@@ -20,11 +20,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chesapeake-computing/stack.git"
+    "url": "git+https://github.com/chesapeakedev/stack.git"
   },
-  "homepage": "https://github.com/chesapeake-computing/stack#readme",
+  "homepage": "https://github.com/chesapeakedev/stack#readme",
   "bugs": {
-    "url": "https://github.com/chesapeake-computing/stack/issues"
+    "url": "https://github.com/chesapeakedev/stack/issues"
   },
   "files": [
     "components",
@@ -87,7 +87,20 @@
     "./components/ux/theme-provider": "./components/ux/theme-provider.tsx",
     "./components/ux/useTheme": "./components/ux/useTheme.ts",
     "./components/ux/FeedbackDrawer": "./components/ux/FeedbackDrawer.tsx",
+    "./components/ux/EmptyState": "./components/ux/EmptyState.tsx",
+    "./components/ux/FriendList": "./components/ux/FriendList.tsx",
+    "./components/ux/FriendRequestList": "./components/ux/FriendRequestList.tsx",
+    "./components/ux/SelectedUsersList": "./components/ux/SelectedUsersList.tsx",
+    "./components/ux/UserSearch": "./components/ux/UserSearch.tsx",
+    "./components/ux/UserSelector": "./components/ux/UserSelector.tsx",
+    "./components/ux/StandardLayout": "./components/ux/StandardLayout/index.ts",
+    "./components/ux/StandardLayout/PageLayout": "./components/ux/StandardLayout/PageLayout.tsx",
+    "./components/ux/StandardLayout/ProfilePage": "./components/ux/StandardLayout/ProfilePage.tsx",
+    "./components/ux/StandardLayout/StandardLayout": "./components/ux/StandardLayout/StandardLayout.tsx",
     "./components/ux/auth": "./components/ux/auth/index.ts",
+    "./components/ux/auth/MultiAuthProvider": "./components/ux/auth/MultiAuthProvider.tsx",
+    "./components/ux/auth/AuthSelector": "./components/ux/auth/AuthSelector.tsx",
+    "./components/ux/auth/useAuth": "./components/ux/auth/useAuth.ts",
     "./components/ux/auth/google": "./components/ux/auth/google/index.ts",
     "./components/ux/auth/google/client": "./components/ux/auth/google/client.ts",
     "./components/ux/auth/google/default-client": "./components/ux/auth/google/default-client.ts",
