@@ -1,5 +1,6 @@
 /* Chesapeake Shared Styles */
 @import "tailwindcss";
+@source "../components";
 
 /* Design tokens and base styles */
 @import "./tokens.css";

@@ -33,7 +33,10 @@ npm install react-day-picker vaul  # if using calendar or drawer components
 
 ### 2. Import Styles
 
-Import the shared styles in your app's main CSS file (e.g., `src/index.css`):
+Import the shared styles in your app's main CSS file (e.g., `src/index.css`).
+The package stylesheet declares its own `@source` directives for Tailwind v4
+class detection, so you do **not** need to add a separate `@source` or `content`
+path pointing at `node_modules/@chesapeake/stack`.
 
 ```css
 /* Import Tailwind, third-party CSS, and shared styles */
@@ -44,48 +47,7 @@ Import the shared styles in your app's main CSS file (e.g., `src/index.css`):
 @import "@chesapeake/stack/styles/index.css";
 ```
 
-### 3. Configure Tailwind
-
-Extend your `tailwind.config.ts` with the shared preset:
-
-```typescript
-import type { Config } from "tailwindcss";
-import sharedPreset from "@chesapeake/stack/tailwind.preset";
-
-const config: Config = {
-  content: [
-    // your app's content paths
-  ],
-  presets: [sharedPreset],
-  // your app's additional configuration
-};
-
-export default config;
-```
-
-### 4. Configure Tailwind Content
-
-Add the package to your Tailwind content configuration so classes are processed:
-
-**`tailwind.config.ts`**:
-
-```typescript
-import type { Config } from "tailwindcss";
-import sharedPreset from "@chesapeake/stack/tailwind.preset";
-
-const config: Config = {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@chesapeake/stack/**/*.{js,ts,jsx,tsx}",
-  ],
-  presets: [sharedPreset],
-  // your app's additional configuration
-};
-
-export default config;
-```
-
-### 5. Import and Use Components
+### 3. Import and Use Components
 
 Import and use components in your React components:
 
