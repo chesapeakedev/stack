@@ -15,3 +15,4 @@ stack installed and configured per the [root README](../README.md).
 | `feedback-and-notifications.tsx` | FeedbackDrawer, toast notifications, and Dialog |
 | `data-display.tsx` | Cards, badges, avatars, tooltips, and dropdown menus |
 | `user-management.tsx` | UserSelector and FriendList for social features |
+| `retail-location-page.tsx` | LocationHero, HoursStatusStrip, StoreSwitcher, and StickyShopBar |

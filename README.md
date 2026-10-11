@@ -331,6 +331,7 @@ installed and configured.
 | [`feedback-and-notifications.tsx`](https://github.com/chesapeakedev/stack/blob/main/examples/feedback-and-notifications.tsx) | FeedbackDrawer, toast variants (success / error / promise), confirmation Dialog |
 | [`data-display.tsx`](https://github.com/chesapeakedev/stack/blob/main/examples/data-display.tsx)                             | Cards, badges, avatars, tooltips, dropdown menus, and EmptyState                |
 | [`user-management.tsx`](https://github.com/chesapeakedev/stack/blob/main/examples/user-management.tsx)                       | UserSelector multi-select search, FriendList with presence indicators           |
+| [`retail-location-page.tsx`](https://github.com/chesapeakedev/stack/blob/main/examples/retail-location-page.tsx)         | LocationHero, HoursStatusStrip, StoreSwitcher, and StickyShopBar                |
 
 ## Package Contents
 
@@ -340,7 +341,8 @@ When installed via npm you get:
 @chesapeake/stack/
 ├── components/
 │   ├── ui/              # Primitive UI components (Button, Input, Card, …)
-│   └── ux/              # Higher-level UX components (auth, layout, feedback)
+│   ├── ux/              # Higher-level UX components (auth, layout, feedback)
+│   └── retail/          # Location page blocks (hero, hours, store switcher)
 ├── styles/
 │   ├── index.css        # Main stylesheet entry point
 │   ├── tokens.css       # Design tokens (CSS custom properties)

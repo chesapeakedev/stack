@@ -25,5 +25,7 @@
 // Re-export everything from subdirectories for convenient imports
 export * from "./components/ui/index.ts";
 export * from "./components/ux/index.ts";
+export * from "./components/retail/index.ts";
+export * from "./types/retail-location.ts";
 export * from "./lib/utils.ts";
 export { default as tailwindPreset } from "./tailwind.preset.ts";

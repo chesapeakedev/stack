@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.4] - 2026-10-11
+
+### Added
+
+- Retail P0 blocks in `components/retail/`: `LocationHero`,
+  `HoursStatusStrip`, `StickyShopBar`, and `StoreSwitcher`
+- `types/retail-location.ts` — `RetailLocation` and supporting types
+  (`Address`, `WeeklyHours`, `FaqItem`, `CommercePlatform`)
+- `examples/retail-location-page.tsx` composing the P0 blocks
+- `isOpenAt` and `hoursForDay` helpers for local weekly hours
+
 ## [0.1.3] - 2026-03-09
 
 ### Changed
@@ -65,6 +76,7 @@ and this project adheres to
 - Full dark mode support via CSS custom properties
 - Apache 2.0 license
 
+[0.1.4]: https://github.com/chesapeakedev/stack/releases/tag/v0.1.4
 [0.1.3]: https://github.com/chesapeakedev/stack/releases/tag/v0.1.3
 [0.1.2]: https://github.com/chesapeakedev/stack/releases/tag/v0.1.2
 [0.1.1]: https://github.com/chesapeakedev/stack/releases/tag/v0.1.1

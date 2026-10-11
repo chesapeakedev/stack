@@ -55,6 +55,7 @@ import { GifSearch } from "@chesapeake/stack/components/ux/GifSearch";
 import { ImageUpload } from "@chesapeake/stack/components/ux/ImageUpload";
 import { TutorialCarousel } from "@chesapeake/stack/components/ux/TutorialCarousel";
 import { LocationInput } from "@chesapeake/stack/components/ui/location-input";
+import { RetailLocationPageExample } from "../examples/retail-location-page.tsx";
 import {
   Calendar as CalendarIcon,
   ChevronDown,
@@ -149,6 +150,19 @@ function ComponentShowcase() {
             </div>
           </div>
         </header>
+
+        <Card className="mb-6">
+          <CardHeader>
+            <CardTitle>Retail location page</CardTitle>
+            <CardDescription>
+              LocationHero, HoursStatusStrip, StoreSwitcher, and the mobile
+              StickyShopBar.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <RetailLocationPageExample />
+          </CardContent>
+        </Card>
 
         {/* Theme Provider Section */}
         <Card className="mb-6">
