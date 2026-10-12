@@ -1,0 +1,4 @@
+interface:
+  display_name: "Component Screenshot"
+  short_description: "Capture isolated screenshots of shared stack components"
+  default_prompt: "Use $component-screenshot to capture a screenshot of the requested shared component."
