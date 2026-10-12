@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.4] - 2026-10-11
+## [0.1.7] - 2026-10-11
 
 ### Added
 
@@ -16,6 +16,31 @@ and this project adheres to
   (`Address`, `WeeklyHours`, `FaqItem`, `CommercePlatform`)
 - `examples/retail-location-page.tsx` composing the P0 blocks
 - `isOpenAt` and `hoursForDay` helpers for local weekly hours
+
+## [0.1.6] - 2026-09-19
+
+### Added
+
+- Neutral `FocusCard`, `FocusFeed`, `TodoCard`, and `EventCard` components for
+  mixed todo and calendar-style feeds
+- Public focus component subpath exports
+
+## [0.1.5] - 2026-08-03
+
+### Added
+
+- `lib/githubIssue`: product-neutral GitHub issue URL parsing, PR rejection,
+  snapshot normalization, and import keys
+
+## [0.1.4] - 2026-08-03
+
+### Added
+
+- UX task components: `TaskInput`, `TaskCard`, and `TaskList` with
+  application-neutral props and public subpath exports
+- UX connectivity component: `ConnectivityBadge` with tone/status presentation
+- UX runner presentation: `RunnerPairingCard` and `RunnerStatusCard` for pairing
+  command display and runner status chrome
 
 ## [0.1.3] - 2026-03-09
 
@@ -76,6 +101,9 @@ and this project adheres to
 - Full dark mode support via CSS custom properties
 - Apache 2.0 license
 
+[0.1.7]: https://github.com/chesapeakedev/stack/releases/tag/v0.1.7
+[0.1.6]: https://github.com/chesapeakedev/stack/releases/tag/v0.1.6
+[0.1.5]: https://github.com/chesapeakedev/stack/releases/tag/v0.1.5
 [0.1.4]: https://github.com/chesapeakedev/stack/releases/tag/v0.1.4
 [0.1.3]: https://github.com/chesapeakedev/stack/releases/tag/v0.1.3
 [0.1.2]: https://github.com/chesapeakedev/stack/releases/tag/v0.1.2

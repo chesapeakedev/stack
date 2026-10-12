@@ -105,6 +105,10 @@ import type {
 
 ### Available Components
 
+The UX task, connectivity, and runner components are application-neutral.
+They accept display values and callbacks; persistence, networking, runner APIs,
+and product-specific task metadata remain in the consuming application.
+
 #### UI Components (`components/ui/`)
 
 - **Button** - Various button variants and sizes

@@ -28,4 +28,5 @@ export * from "./components/ux/index.ts";
 export * from "./components/retail/index.ts";
 export * from "./types/retail-location.ts";
 export * from "./lib/utils.ts";
+export * from "./lib/githubIssue.ts";
 export { default as tailwindPreset } from "./tailwind.preset.ts";
