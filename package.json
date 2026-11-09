@@ -1,6 +1,6 @@
 {
   "name": "@chesapeake/stack",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A simple, reusable React component library and design system built on shadcn/ui with Tailwind CSS",
   "type": "module",
   "packageManager": "npm@10.2.0",
@@ -134,6 +134,9 @@
     "./components/ux/auth/github/types": "./components/ux/auth/github/types.ts",
     "./lib/utils": "./lib/utils.ts",
     "./lib/githubIssue": "./lib/githubIssue.ts",
+    "./lib/layoutTier": "./lib/layoutTier.ts",
+    "./lib/useMediaQuery": "./lib/useMediaQuery.ts",
+    "./lib/useLayoutTier": "./lib/useLayoutTier.ts",
     "./types/user": "./types/user.ts",
     "./types/retail-location": "./types/retail-location.ts",
     "./styles": "./styles/index.css",

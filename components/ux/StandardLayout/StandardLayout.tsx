@@ -5,6 +5,7 @@
 import { useState } from "react";
 import { Button } from "../../../components/ui/button";
 import { useAuth } from "../auth";
+import { useLayoutTier } from "../../../lib/useLayoutTier.ts";
 import { ProfilePage } from "./ProfilePage";
 import type { AuthUser } from "../auth/context";
 
@@ -46,6 +47,8 @@ export function StandardLayout({
   maxWidth,
 }: StandardLayoutProps) {
   const [showProfile, setShowProfile] = useState(false);
+  const layoutTier = useLayoutTier();
+  const shellPadding = "p-3 md:p-4";
   const { user: authUser } = useAuth();
 
   // Determine if user is logged in based on authUser
@@ -94,11 +97,14 @@ export function StandardLayout({
     return (
       <div
         className={`h-screen flex flex-col overflow-hidden ${className ?? ""}`}
+        data-layout-tier={layoutTier}
       >
         {/* Toolbar/Header */}
         <div className="border-b bg-background flex-shrink-0">
           <div className="flex justify-center">
-            <div className={`w-full ${getMaxWidthClass(maxWidth)} p-4`}>
+            <div
+              className={`w-full ${getMaxWidthClass(maxWidth)} ${shellPadding}`}
+            >
               <div className="flex justify-between items-center">
                 {headerContent ? (
                   <div className="flex items-center gap-2 w-full">
@@ -242,11 +248,14 @@ export function StandardLayout({
   return (
     <div
       className={`h-screen flex flex-col overflow-hidden ${className ?? ""}`}
+      data-layout-tier={layoutTier}
     >
       {/* Toolbar/Header */}
       <div className="border-b bg-background flex-shrink-0">
         <div className="flex justify-center">
-          <div className={`w-full ${getMaxWidthClass(maxWidth)} p-4`}>
+          <div
+            className={`w-full ${getMaxWidthClass(maxWidth)} ${shellPadding}`}
+          >
             <div className="flex justify-between items-center">
               {headerContent ? (
                 <div className="flex items-center gap-2 w-full">

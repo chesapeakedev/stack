@@ -17,6 +17,10 @@ system consists of:
 - `styles/index.css` that includes Tailwind CSS, design tokens, base styles, and
   component styles
 - `tailwind.preset.ts` for use in `tailwind.config.ts`
+- **Layout tiers** (`compact` / `hybrid` / `comfortable`): `useLayoutTier`,
+  `LAYOUT_TIER_*` constants, and `data-layout-tier` on `StandardLayout`. See
+  denoise-ui `docs/responsive-layout.md` for product rules; apps own feature
+  toolbars.
 
 ## Installation
 

@@ -29,4 +29,7 @@ export * from "./components/retail/index.ts";
 export * from "./types/retail-location.ts";
 export * from "./lib/utils.ts";
 export * from "./lib/githubIssue.ts";
+export * from "./lib/layoutTier.ts";
+export * from "./lib/useMediaQuery.ts";
+export * from "./lib/useLayoutTier.ts";
 export { default as tailwindPreset } from "./tailwind.preset.ts";
